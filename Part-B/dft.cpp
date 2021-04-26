@@ -39,58 +39,129 @@ vector<complex<double>> DFT(vector<complex<double>> data)
 }
 
 
+
 int main(){
     
-    inFile.open("wave.txt");
-    string line;
+    inFile.open("test");
+    vector< complex<double> > Data; // Create vector of complex numbers
+ // Place 1 + j2 in vector
+     while (inFile >> x) 
+     {
+        Data.push_back(complex<double>(x));
+     }
+       vector< complex<double>> TransformedData;
+        TransformedData=DFT(Data);
+
+    // for (int i =0 ;i<TransformedData.size();i++)
+    for (int i =0 ;i<10;i++)
+    {
+        cout<<TransformedData[i]<<"\n";
+        // cout<<TransformedData[i].real()+TransformedData[i].imag()*1i;
+    }
+} 
+//return 0;
+
+
+
+// int main(){
+    
+//     inFile.open("wave.txt");
+//     string line;
 
  
-    if (!inFile) {
-        cout<< "Unable to open file datafile.txt";
-    }
-    else{
-        // cout << typeid(inFile).name() << '\n';
-        cout<<"file readed successfully"<<'\n'; // call system to stop
-    }
+//     if (!inFile) {
+//         cout<< "Unable to open file datafile.txt";
+//     }
+//     else{
+//         // cout << typeid(inFile).name() << '\n';
+//         cout<<"file readed successfully"<<'\n'; // call system to stop
+//     }
 
-    vector<complex<double>> signal;
-    vector<complex<double>> Fourier;
+//     vector<complex<double>> signal;
+//     vector<complex<double>> Fourier;
 
-    for (int i = 0; i < 11; i++)
-    {
+//     for (int i = 0; i < 11; i++)
+//     {
         
-        getline(inFile, line);
-        double linedata = stod (line);
-        signal.push_back(linedata);
+//         getline(inFile, line);
+//         double linedata = stod (line);
+//         signal.push_back(linedata);
         
-        cout << "Data: " << line <<'\n' ;
-    }
+//         cout << "Data: " << line <<'\n' ;
+//     }
 
-    inFile.clear();
-    inFile.seekg(0, std::ios::beg);
+//     inFile.clear();
+//     inFile.seekg(0, std::ios::beg);
 
-    Fourier=DFT(signal);
+//     Fourier=DFT(signal);
 
-    for (int z = 0; z < 11; z++)
-    {
-        cout << "Fourier: " << Fourier[z] <<'\n' ;
-    }
+//     for (int z = 0; z < 11; z++)
+//     {
+//         cout << "Fourier: " << Fourier[z] <<'\n' ;
+//     }
     
 
-    inFile.clear();
-    inFile.seekg(0, std::ios::beg);
+//     inFile.clear();
+//     inFile.seekg(0, std::ios::beg);
 
 
-    while (inFile >> x) 
-    {
-        sum++;
-    }
+//     while (inFile >> x) 
+//     {
+//         sum++;
+//     }
  
-    cout<<sum<<'\n';
+//     cout<<sum<<'\n';
 
-    // for (int i = 0; i < 5; i++)
+//     // for (int i = 0; i < 5; i++)
+//     // {
+//     //  cout << i << "\n";
+//     // }  
+    
+//     }
+
+
+// int main(){
+
+//     inFile.open("test");
+//     vector< complex<double> > Data; // Create vector of complex numbers
+//  // Place 1 + j2 in vector
+//      while (inFile >> x)
+//      {
+//         Data.push_back(complex<double>(x));
+//      }
+       
+        
+
+//     for (int i =0 ;i<TransformedData.size();i++){
+
+
+//     cout<<TransformedData[i].real()+TransformedData[i].imag()*1i;
+//     }
+// return 0;
+
+
+//     }
+
+    // if (!inFile) {
+    //     cout<< "Unable to open file datafile.txt";
+    // }
+    // else{
+    //     // cout << typeid(inFile).name() << '\n';
+    //     cout<<"file readed successfully"<<'\n'; // call system to stop
+    // }
+
+
+
+    //     vector<complex<double>> signal;
+    // for (int i = 0; i < 11; i++)
     // {
-    //  cout << i << "\n";
-    // }  
-    
-    }
+
+    //     getline(inFile, line);
+    //     double linedata = stod (line);
+    //     signal.push_back(linedata);
+
+    //     cout << "Data: " << line <<'\n' ;
+    // }
+
+
+
