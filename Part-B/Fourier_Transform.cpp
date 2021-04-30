@@ -118,7 +118,7 @@ int main()
     TransformedData= FFT(Data);
 
     //for (int z =0 ;z<TransformedData.size();z++)
-    for (int z = 0; z < 11; z++)
+    for (int z = 0; z < TransformedData.size(); z++)
     {
         cout << "DFT: " << dft[z] <<'\n' ;
         cout << "FFT: " << TransformedData[z] <<'\n' ;
