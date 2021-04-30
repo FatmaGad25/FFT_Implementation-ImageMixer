@@ -52,7 +52,7 @@ ifstream inFile;
     }
     return freqbins;
     }
-
+  
     int main(){
     
     inFile.open("test");
