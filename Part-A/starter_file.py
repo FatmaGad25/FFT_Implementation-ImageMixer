@@ -8,7 +8,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         super(ApplicationWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.images=[self.ui.image1,self.ui.image1_2,self.ui.image1_3,self.ui.image1_4,self.ui.image1_5,self.ui.image1_6]
+        self.images=[self.ui.output1,self.ui.output2,self.ui.img1,self.ui.img1_component,self.ui.img2,self.ui.img2_component]
         for i in range(len(self.images)):
             self.images[i].ui.histogram.hide()
             self.images[i].ui.roiBtn.hide()
