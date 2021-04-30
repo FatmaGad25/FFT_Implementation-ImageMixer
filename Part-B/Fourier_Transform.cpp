@@ -1,4 +1,6 @@
-#include<iostream>
+#include <complex>
+#include <vector>
+#include <iostream>
 #include <fstream>
 #include<complex>
 #include<vector>
@@ -6,20 +8,56 @@ using namespace std;
 //You can read information from files into your C++ program. This is possible using stream extraction operator (>>). You use the operator in the same way you use it to read user input from the keyboard. However, instead of using the cin object, you use the ifstream/ fstream object.
 ifstream inFile;
 // Reading file
-// int sum = 0;
- double x=0;
- double pi = 3.14159265358979323846;
+int sum = 0;
+//float x = 0;
+double x=0;
+double pi = 3.14159265358979323846;
+extern "C"
+{
+    vector<complex<double>> DFT(vector<complex<double>> data);
+}
 
 
-    vector<complex<double>> FFT(vector<complex<double>> &sampels){
+///////////////////DFT function
+vector<complex<double>> DFT(vector<complex<double>> data)
+{
+    int N = data.size();
+    int K = N;
+    complex<double> intsum;
+    vector<complex<double>> dft;
+    dft.reserve(K);
+
+    for (int k=0; k<K; k++)
+    {
+        intsum= (0,0);
+
+        for (int n=0; n<N; n++)
+        {
+            double real= cos(((2*M_PI)/N)*k*n);
+            double img= sin(((2*M_PI)/N)*k*n);
+            complex<double> cotec (real, -img);
+            intsum+= data[n]*cotec;
+        }
+        dft.push_back(intsum);
+    }
+
+    return dft;
+
+}
+
+/////////////////////////FFT////////////////
+
+vector<complex<double>> FFT(vector<complex<double>> &sampels)
+{
+
     // find the number of samples we have
         int N = sampels.size();
     // Executr the end of the recursive even/odd splits once we only have one sample
         if(N==1){return sampels;}
-    
+
 /* Split the sampels into even and odd subsums */
     // Find half the total number of samples
-    int M = N/2;
+        int M = N/2;
 
     // Declare an even and odd complex vector
     vector<complex<double>> Xeven(M,0);
@@ -52,36 +90,54 @@ ifstream inFile;
     }
     return freqbins;
     }
-  
-    int main(){
-    
+
+
+
+
+int main()
+{
     inFile.open("test");
-    vector< complex<double> > Data; // Create vector of complex numbers
+    string line;
+
+    vector<complex<double>> Data; // Create vector of complex numbers
  // Place 1 + j2 in vector
-     while (inFile >> x) {
-         Data.push_back(complex<double>(x));
+
+    vector< complex<double>> TransformedData;
+
+    vector<complex<double>> dft;
+
+    while (inFile >> x)
+     {
+        Data.push_back(complex<double>(x));
      }
-       vector< complex<double>> TransformedData;
-        TransformedData=FFT(Data);
 
-    for (int i =0 ;i<TransformedData.size();i++){
-        
+    inFile.clear();
+    inFile.seekg(0, std::ios::beg);
 
-    cout<<TransformedData[i].real()+TransformedData[i].imag()*1i;
+    dft= DFT(Data);
+    TransformedData= FFT(Data);
+
+    //for (int z =0 ;z<TransformedData.size();z++)
+    for (int z = 0; z < 11; z++)
+    {
+        cout << "DFT: " << dft[z] <<'\n' ;
+        cout << "FFT: " << TransformedData[z] <<'\n' ;
+        cout <<'\n' ;
+        // cout<<TransformedData[i].real()+TransformedData[i].imag()*1i;
     }
-return 0;
- 
-    // if (!inFile) {
-    //     cout<< "Unable to open file datafile.txt";
-    // }
-    // else{
-    //     cout<<"file readed successfully"<<'\n'; // call system to stop
-    // }
-    //      while (inFile >> x) {
-    //     sum++;
-    //             }
-    //     cout<<sum<<'\n';
-    
+
+
+    inFile.clear();
+    inFile.seekg(0, std::ios::beg);
+
+
+    while (inFile >> x)
+    {
+        sum++;
+    }
+
+    cout<<sum<<'\n';
+
     }
 
 
