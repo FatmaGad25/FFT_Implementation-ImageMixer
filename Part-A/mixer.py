@@ -267,3 +267,14 @@ class Ui_MainWindow(object):
         self.output2_label.setText(_translate("MainWindow", "Output 2"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
 from pyqtgraph import ImageView
+
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

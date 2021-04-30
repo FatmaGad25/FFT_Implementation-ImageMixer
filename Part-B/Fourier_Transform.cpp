@@ -15,9 +15,17 @@ double pi = 3.14159265358979323846;
 extern "C"
 {
     vector<complex<double>> DFT(vector<complex<double>> data);
+    vector<complex<double>> FFT(vector<complex<double>> &sampels);
+    int addition(int a,int b);
 }
 
 
+int addition(int a,int b);
+
+int addition(int a,int b)
+{
+	return (a+b);
+}
 ///////////////////DFT function
 vector<complex<double>> DFT(vector<complex<double>> data)
 {

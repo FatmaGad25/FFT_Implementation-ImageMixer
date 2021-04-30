@@ -7,18 +7,19 @@ ifstream inFile;
 // Reading file
 int sum = 0;
 float x = 0;
-extern "C"
-{
-    vector<complex<double>> DFT(vector<complex<double>> data);
-}
+// extern "C"
+// {
+//     vector<complex<double>> DFT(vector<complex<double>> data);
+// }
 //DFT function
-vector<complex<double>> DFT(vector<complex<double>> data)
+complex<double> * DFT(complex<double> data[])
 {
-    int N = data.size();
+    int N = sizeof(data);
     int K = N;
+    complex<double> data_arr[K];
     complex<double> intsum;
-    vector<complex<double>> dft;
-    dft.reserve(K);
+    // vector<complex<double>> dft;
+    // dft.reserve(K);
 
     for (int k=0; k<K; k++)
     {
@@ -31,10 +32,10 @@ vector<complex<double>> DFT(vector<complex<double>> data)
             complex<double> cotec (real, -img);
             intsum+= data[n]*cotec;
         }
-        dft.push_back(intsum);
+        data_arr[k]=intsum;
     }
     
-    return dft;
+    return data_arr;
 
 }
 
@@ -43,22 +44,59 @@ vector<complex<double>> DFT(vector<complex<double>> data)
 int main(){
     
     inFile.open("test");
-    vector< complex<double> > Data; // Create vector of complex numbers
+    // vector< complex<double> > Data; // Create vector of complex numbers
  // Place 1 + j2 in vector
-     while (inFile >> x) 
-     {
-        Data.push_back(complex<double>(x));
-     }
-       vector< complex<double>> TransformedData;
-        TransformedData=DFT(Data);
+    // inFile.clear();
+    // inFile.seekg(0, std::ios::beg);
+
+    int size = inFile.tellg();
+    cout << "size: " << size <<'\n' ;
+    complex<double> Data[1000];
+    string line;
+    int z;
+    complex<double> output[size];
+
+    //  while (inFile >> x) 
+    //  {
+
+    //     getline(inFile, line);
+    //     Data[x] = line;
+    //     // Data.push_back(complex<double>(x));
+    //  }
+
+    // inFile.clear();
+    // inFile.seekg(0, std::ios::beg);
+
+
+    for (int i = 0; i < 20; i++)
+    {
+        
+        getline(inFile, line);
+        complex<double> linedata = stod (line);
+        Data[i]= linedata;
+        
+        cout << "Data: " << line <<'\n' ;
+    }
+
+    complex<double> * output;
+    // output=DFT(Data);
+
+
+
+
+}
+
+
+    //    vector< complex<double>> TransformedData;
+    //     TransformedData=DFT(Data);
 
     // for (int i =0 ;i<TransformedData.size();i++)
-    for (int i =0 ;i<10;i++)
-    {
-        cout<<TransformedData[i]<<"\n";
-        // cout<<TransformedData[i].real()+TransformedData[i].imag()*1i;
-    }
-} 
+//     for (int i =0 ;i<10;i++)
+//     {
+//         cout<<TransformedData[i]<<"\n";
+//         // cout<<TransformedData[i].real()+TransformedData[i].imag()*1i;
+//     }
+
 //return 0;
 
 

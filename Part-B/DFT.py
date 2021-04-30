@@ -37,7 +37,7 @@ x = np.array([0.0,
 0.020080566,
 0.020751953,
 0.021453857])
-
+# x= complex(4,3)
 y = library.FFT(x)
-
+# y =  library.addition(5,2)
 print(y)
