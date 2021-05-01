@@ -1,7 +1,7 @@
 import ctypes
 import numpy as np
 
-library = ctypes.CDLL('./fft.so')
+library = ctypes.CDLL('./dft3.so')
 
 library.connect()
 
@@ -37,7 +37,8 @@ x = np.array([0.0,
 0.020080566,
 0.020751953,
 0.021453857])
+y = x.astype(complex)
 # x= complex(4,3)
-y = library.FFT(x)
+z = library.DFT(y)
 # y =  library.addition(5,2)
-print(y)
+print(z)
