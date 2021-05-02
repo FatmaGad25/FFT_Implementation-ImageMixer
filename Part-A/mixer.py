@@ -9,9 +9,11 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
-
-class Ui_MainWindow(object):
+from pyqtgraph import ImageView
+import cv2
+import numpy as np
+# class Ui_MainWindow(object):
+class Ui_MainWindow(QtGui.QMainWindow):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         #MainWindow.resize(1131, 923)
@@ -60,7 +62,10 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.img2_component, 1, 1, 1, 1)
         self.gridLayout_2.addLayout(self.gridLayout_3, 2, 0, 1, 2)
         self.img1 = ImageView(self.centralwidget)
+        # self.img1 = QtWidgets.QLabel(self.centralwidget)
         self.img1.setObjectName("img1")
+        # self.img1.setScaledContents(True)
+        # self.img1.setScaledContents(True)
         self.gridLayout_2.addWidget(self.img1, 1, 0, 1, 1)
         self.img1_component = ImageView(self.centralwidget)
         self.img1_component.setObjectName("img1_component")
@@ -218,6 +223,15 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.menubar.addAction(self.menuFile.menuAction())
+        self.actionOpen = QtWidgets.QAction(MainWindow)
+        self.actionOpen.setObjectName("actionOpen")
+        self.actionOpen.setText("Open File")
+        self.menuFile.addAction(self.actionOpen)
+        self.pause = QtWidgets.QPushButton(self.centralwidget)
+        self.pause.setGeometry(QtCore.QRect(315, 1, 35, 35))
+        self.pause.setText("open")
+        self.pause.setObjectName("pause")
+        self.pause.setShortcut("Ctrl+o")
         # self.output2.close()
         # self.img1_component.close() 
         # self.output1.close()
@@ -226,6 +240,42 @@ class Ui_MainWindow(object):
         # self.img2.close()
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        # self.pause.clicked.connect(lambda:self.opensignal())
+        self.actionOpen.triggered.connect(lambda:self.Components())
+        self.counter=-1
+        self.images=[self.img1,self.img2,self.img1_component,self.img2_component,self.output1,self.output2]
+
+
+    # def readsignal(self):
+    #     #self.fname=QtGui.QFileDialog.getOpenFileName(self,"txt or CSV or xls","QFileDialog.getOpenFileName()", "","All Files (*);;Python Files (*.py)")
+    #     self.fname=QtGui.QFileDialog.getOpenFileName(self, 'Open file', "Image files (*.jpg *.gif)")
+    #     self.path=self.fname[0]
+    #     self.img= cv2.imread(self.path,0)
+    #     print (self.img)
+    # def opensignal(self):
+    #     self.readsignal()
+    #     self.counter+=1
+    #     self.images[self.counter%2].setImage(self.img.T)
+    #     # self.img1.setImage(self.img.T)
+
+    # def Components(self):
+    #     self.fft = np.fft.fft2(self.img)
+    #     # print(self.fft)
+    #     self.amplitude = abs(self.fft)
+    #     self.magnitude = 20*np.log(np.abs(np.fft.fftshift(self.fft)))
+    #     self.fshift = np.fft.fftshift(self.fft)
+    #     self.ishift = np.fft.ifftshift(fshift)
+    #     self.phase = np.angle(self.fft)
+    #     self.real = np.real(self.fft)
+    #     self.imaginary = np.imag(self.fft)
+    #     self.imagnitude= np.fft.ifft2(self.magnitude)
+    #     self.iamplitude= np.fft.ifft2(self.amplitude)
+    #     print(self.phase)
+    #     self.images[2+self.counter%2].setImage(self.imagnitude.T)
+
+
+
+
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -267,9 +317,6 @@ class Ui_MainWindow(object):
         self.output1_label.setText(_translate("MainWindow", "Outpu1 1"))
         self.output2_label.setText(_translate("MainWindow", "Output 2"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
-from pyqtgraph import ImageView
-
-
 
 if __name__ == "__main__":
     import sys
