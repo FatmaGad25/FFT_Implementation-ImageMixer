@@ -68,7 +68,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             elif self.img_combo[i].currentText() == "Imaginary": 
                 x= self.imaginary
                 print(self.img_combo[i].currentText())
-
+            else: self.images[2+y%2].clear()
         self.images[2+y%2].setImage(x.T)
 
 
