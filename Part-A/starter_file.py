@@ -7,6 +7,19 @@ import numpy as np
 #import logging
 # counter=-1
 
+
+class imgs: 
+    def __init__(self, path):
+        self.img= cv2.imread(path,0)
+        self.fft = np.fft.fft2(self.img)
+        self.amplitude = abs(self.fft)
+        self.magnitude = 20*np.log(np.abs(np.fft.fftshift(self.fft)))
+        self.phase = np.angle(self.fft)
+        self.real = np.real(self.fft)
+        self.imaginary = np.imag(self.fft)
+
+
+
 class ApplicationWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(ApplicationWindow, self).__init__()
@@ -34,7 +47,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.path=self.fname[0]
         self.img= cv2.imread(self.path,0)
         self.data.append(self.img)
-        print (self.img)
+        # print (self.img)
 
     def opensignal(self):
         self.readsignal()
