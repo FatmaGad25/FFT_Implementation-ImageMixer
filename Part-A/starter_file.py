@@ -30,7 +30,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
 
     def readsignal(self):
         #self.fname=QtGui.QFileDialog.getOpenFileName(self,"txt or CSV or xls","QFileDialog.getOpenFileName()", "","All Files (*);;Python Files (*.py)")
-        self.fname=QtGui.QFileDialog.getOpenFileName(self, 'Open file', "Image files (*.jpg *.gif)")
+        self.fname=QtGui.QFileDialog.getOpenFileName(self, 'Open file',"*.jpg;;" "*.jpeg;;" "*.png;;")
         self.path=self.fname[0]
         self.img= cv2.imread(self.path,0)
         self.data.append(self.img)
@@ -70,6 +70,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
                 print(self.img_combo[i].currentText())
             else: self.images[2+y%2].clear()
         self.images[2+y%2].setImage(x.T)
+        
 
 
 
