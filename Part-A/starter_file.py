@@ -1,12 +1,12 @@
 from PyQt5 import QtWidgets
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets 
+from PyQt5.QtWidgets import QMessageBox
 from mixer import Ui_MainWindow
 from components import inputimg
 import sys
 import cv2
 import numpy as np
 import os
-
 
 class ApplicationWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -30,35 +30,50 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.paths=[]
         self.imgwidth=[]
         self.imgheight=[]
-        self.ui.pause.clicked.connect(lambda:self.opensignal())
-        self.ui.actionOpen.triggered.connect(lambda:self.Components())
+        #self.ui.pause.clicked.connect(lambda:self.opensignal(0))
+        self.ui.actionOpen1.triggered.connect(lambda:self.opensignal(0))
+        self.ui.actionOpen2.triggered.connect(lambda:self.opensignal(1))
         self.ui.img1_combo.currentTextChanged.connect(lambda:self.Components(0))
         self.ui.img2_combo.currentTextChanged.connect(lambda:self.Components(1))
+        self.ui.output_channel.currentTextChanged.connect(lambda:self.mixer())
+        
         for i in range(0,2):
             self.sliders[i].valueChanged.connect(lambda:self.mixer())
             # self.sliders[i].setMaximum(1)
             # self.sliders[i].setTickInterval(0.1)
             self.types[i].currentTextChanged.connect(lambda:self.mixer())
             self.opimg[i].currentTextChanged.connect(lambda:self.mixer())
+        
 
     def readsignal(self):
         self.fname=QtGui.QFileDialog.getOpenFileName(self,' Open File',os.getenv('home'),"jpg(*.jpg) ;; jpeg(*.jpeg) ")
-        # self.fname=QtGui.QFileDialog.getOpenFileName(self, 'Open file', "Image files (*.jpg *.gif)")
         self.path=self.fname[0]
-        self.paths.append(self.path)
         self.imgdata = inputimg(self.path)
         self.img= cv2.imread(self.path,0)
         self.height, self.width = self.img.shape
-        # self.data.append(self.img)
-        self.imgwidth.append(self.width)
-        self.imgheight.append(self.height)
 
-    def opensignal(self):
-        self.readsignal()
-        self.counter+=1
-        self.ui.images[self.counter%2].setImage((self.imgdata.img).T)
-        self.ui.images[self.counter%2].view.setRange(xRange=[0,self.width], yRange=[0,self.height],padding=0)
-        
+    def opensignal(self ,num):
+        if num == 0:
+            self.readsignal()
+            self.paths.append(self.path)
+            self.imgwidth.append(self.width)
+            self.imgheight.append(self.height)
+            #print(self.imgwidth , self.imgheight)
+            self.ui.images[0].setImage((self.imgdata.img).T)
+            #self.ui.images[0].view.setRange(xRange=[0,self.width], yRange=[0,self.height],padding=0)
+        if num == 1:
+            self.readsignal()
+            if self.width != self.imgwidth[0] or self.height !=self.imgheight[0]:
+                QMessageBox.about(self,"Error !","Please Choose Another image with the same dimensions")
+            else :
+                self.paths.append(self.path)
+                self.imgwidth.append(self.width)
+                self.imgheight.append(self.height)
+                #print(self.imgwidth , self.imgheight)
+                self.ui.images[1].setImage((self.imgdata.img).T)
+                #self.ui.images[1].view.setRange(xRange=[0,self.width], yRange=[0,self.height],padding=0)   
+
+                    
 
     def Components(self,y):
         self.images[2+y%2].clear()
@@ -98,7 +113,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             self.path2= self.paths[1]
             self.imgmix1= inputimg(self.path1)
             self.imgmix2= inputimg(self.path2)
-            if (self.type1=="Magnitude" or self.type1=="Pahse") and (self.type2=="Magnitude" or self.type2=="Pahse"):
+            if (self.type1=="Magnitude" or self.type1=="Phase") and (self.type2=="Magnitude" or self.type2=="Phase"):
                 self.mode ="magphase"
                 print ("check1")
                 print (self.type1, self.type2)
@@ -113,7 +128,6 @@ class ApplicationWindow(QtWidgets.QMainWindow):
                 print("can't mix")
                 print (self.type1, self.type2)
                 print( self.img1, self.img2)
-
             
             if (self.img1 == "Image 1" and self.img2 == "Image 2" ):
                 output= self.imgmix1.mix(self.imgmix2,self.gain1,self.gain2,self.mode,self.type1)
@@ -125,9 +139,17 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             print (self.type1, self.type2)
             print( self.img1, self.img2)
             #show the same image ba3deen
-
-        self.images[4].setImage((output).T)    
+        if self.ui.output_channel.currentText() == "Output 1":        
+            self.images[4].setImage((output).T)    
+        elif self.ui.output_channel.currentText() == "Output 2":        
+            self.images[5].setImage((output).T)
         
+    # def ouput_image(self):
+    #     if self.ui.output_channel.currentText() == "Output 1":
+    #         self.mixer(4)
+    #     elif self.ui.output_channel.currentText() == "Output 2":
+    #         self.mixer(5)
+           
 
 
 

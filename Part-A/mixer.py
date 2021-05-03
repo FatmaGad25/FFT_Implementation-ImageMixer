@@ -224,15 +224,21 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.menubar.addAction(self.menuFile.menuAction())
-        self.actionOpen = QtWidgets.QAction(MainWindow)
-        self.actionOpen.setObjectName("actionOpen")
-        self.actionOpen.setText("Open File")
-        self.menuFile.addAction(self.actionOpen)
-        self.pause = QtWidgets.QPushButton(self.centralwidget)
-        self.pause.setGeometry(QtCore.QRect(315, 1, 35, 35))
-        self.pause.setText("open")
-        self.pause.setObjectName("pause")
-        self.pause.setShortcut("Ctrl+o")
+        self.actionOpen1 = QtWidgets.QAction(MainWindow)
+        self.actionOpen1.setObjectName("actionOpen1")
+        self.actionOpen1.setText("Image 1")
+        self.menuFile.addAction(self.actionOpen1)
+
+        self.actionOpen2 = QtWidgets.QAction(MainWindow)
+        self.actionOpen2.setObjectName("actionOpen2")
+        self.actionOpen2.setText("Image 2")
+        self.menuFile.addAction(self.actionOpen2)
+
+        # self.pause = QtWidgets.QPushButton(self.centralwidget)
+        # self.pause.setGeometry(QtCore.QRect(315, 1, 35, 35))
+        # self.pause.setText("open")
+        # self.pause.setObjectName("pause")
+        # self.pause.setShortcut("Ctrl+o")
         # self.output2.close()
         # self.img1_component.close() 
         # self.output1.close()
@@ -242,7 +248,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         # self.pause.clicked.connect(lambda:self.opensignal())
-        self.actionOpen.triggered.connect(lambda:self.Components())
+        #self.actionOpen.triggered.connect(lambda:self.Components())
         self.counter=-1
         self.images=[self.img1,self.img2,self.img1_component,self.img2_component,self.output1,self.output2]
 
@@ -317,7 +323,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.component2_type.setItemText(4, _translate("MainWindow", "Imaginary"))
         self.output1_label.setText(_translate("MainWindow", "Outpu1 1"))
         self.output2_label.setText(_translate("MainWindow", "Output 2"))
-        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.menuFile.setTitle(_translate("MainWindow", "Open"))
 
 if __name__ == "__main__":
     import sys
