@@ -42,6 +42,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.ui.images[self.counter%2].setImage(self.img.T)
 
     def Components(self,y):
+        self.images[2+y%2].clear()
         data = self.data[y%2]
         self.fft = np.fft.fft2(data)
         # print(self.fft)
