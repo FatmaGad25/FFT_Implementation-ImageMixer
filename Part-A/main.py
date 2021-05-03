@@ -50,7 +50,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.weights = [..., ...]
 
         # Combo Lists
-        self.updateCombos = [self.ui.img1_combo,self.ui.img2_combo]
+        self.imagecombos = [self.ui.img1_combo,self.ui.img2_combo]
         #self.imageCombos = [self.ui.img1_combo,self.ui.img2_combo]
         #self.componentCombos = [self.combo_select_mode1, self.combo_select_mode2]
         

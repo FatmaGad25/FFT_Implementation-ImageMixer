@@ -109,6 +109,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.component1_slider.setSingleStep(10)
         self.component1_slider.setOrientation(QtCore.Qt.Horizontal)
         self.component1_slider.setObjectName("component1_slider")
+        self.component1_slider.setValue(100)
         self.gridLayout_5.addWidget(self.component1_slider, 3, 1, 1, 2)
         self.component1_img = QtWidgets.QComboBox(self.centralwidget)
         self.component1_img.setObjectName("component1_img")

@@ -1,23 +1,11 @@
 from PyQt5 import QtWidgets
 from PyQt5 import QtCore, QtGui, QtWidgets
 from mixer import Ui_MainWindow
+from components import inputimg
 import sys
 import cv2
 import numpy as np
-#import logging
-# counter=-1
-
-
-class imgs: 
-    def __init__(self, path):
-        self.img= cv2.imread(path,0)
-        self.fft = np.fft.fft2(self.img)
-        self.amplitude = abs(self.fft)
-        self.magnitude = 20*np.log(np.abs(np.fft.fftshift(self.fft)))
-        self.phase = np.angle(self.fft)
-        self.real = np.real(self.fft)
-        self.imaginary = np.imag(self.fft)
-
+import os
 
 
 class ApplicationWindow(QtWidgets.QMainWindow):
@@ -27,6 +15,9 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.images=[self.ui.img1,self.ui.img2,self.ui.img1_component,self.ui.img2_component,self.ui.output1,self.ui.output2]
         self.img_combo=[self.ui.img1_combo,self.ui.img2_combo]
+        self.sliders=[self.ui.component1_slider, self.ui.component2_slider]
+        self.types=[self.ui.component1_type,self.ui.component2_type]
+        self.opimg=[self.ui.component1_img,self.ui.component2_img]
         # self.images=[self.ui.img2,self.ui.img1_component,self.ui.img2_component,self.ui.output1,self.ui.output2]
 
         for i in range(len(self.images)):
@@ -36,54 +27,107 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             self.images[i].ui.roiPlot.hide()
         self.counter=-1
         self.data=[]
+        self.paths=[]
+        self.imgwidth=[]
+        self.imgheight=[]
         self.ui.pause.clicked.connect(lambda:self.opensignal())
         self.ui.actionOpen.triggered.connect(lambda:self.Components())
         self.ui.img1_combo.currentTextChanged.connect(lambda:self.Components(0))
         self.ui.img2_combo.currentTextChanged.connect(lambda:self.Components(1))
+        for i in range(0,2):
+            self.sliders[i].valueChanged.connect(lambda:self.mixer())
+            # self.sliders[i].setMaximum(1)
+            # self.sliders[i].setTickInterval(0.1)
+            self.types[i].currentTextChanged.connect(lambda:self.mixer())
+            self.opimg[i].currentTextChanged.connect(lambda:self.mixer())
 
     def readsignal(self):
-        #self.fname=QtGui.QFileDialog.getOpenFileName(self,"txt or CSV or xls","QFileDialog.getOpenFileName()", "","All Files (*);;Python Files (*.py)")
-        self.fname=QtGui.QFileDialog.getOpenFileName(self, 'Open file', "Image files (*.jpg *.gif)")
+        self.fname=QtGui.QFileDialog.getOpenFileName(self,' Open File',os.getenv('home'),"jpg(*.jpg) ;; jpeg(*.jpeg) ")
+        # self.fname=QtGui.QFileDialog.getOpenFileName(self, 'Open file', "Image files (*.jpg *.gif)")
         self.path=self.fname[0]
+        self.paths.append(self.path)
+        self.imgdata = inputimg(self.path)
         self.img= cv2.imread(self.path,0)
-        self.data.append(self.img)
-        # print (self.img)
+        self.height, self.width = self.img.shape
+        # self.data.append(self.img)
+        self.imgwidth.append(self.width)
+        self.imgheight.append(self.height)
 
     def opensignal(self):
         self.readsignal()
         self.counter+=1
-        self.ui.images[self.counter%2].setImage(self.img.T)
+        self.ui.images[self.counter%2].setImage((self.imgdata.img).T)
+        self.ui.images[self.counter%2].view.setRange(xRange=[0,self.width], yRange=[0,self.height],padding=0)
+        
 
     def Components(self,y):
         self.images[2+y%2].clear()
-        data = self.data[y%2]
-        self.fft = np.fft.fft2(data)
-        # print(self.fft)
-        self.amplitude = abs(self.fft)
-        self.magnitude = 20*np.log(np.abs(np.fft.fftshift(self.fft)))
-        # self.fshift = np.fft.fftshift(self.fft)
-        # self.ishift = np.fft.ifftshift(fshift)
-        self.phase = np.angle(self.fft)
-        self.real = np.real(self.fft)
-        self.imaginary = np.imag(self.fft)
-        self.imagnitude= np.fft.ifft2(self.magnitude)
-        self.iamplitude= np.fft.ifft2(self.amplitude)
-        # print(self.phase)
+        self.path = self.paths[y%2]
+        self.imgdata = inputimg(self.path)
         for i in range (0,2):
             if self.img_combo[i].currentText() == "Magnitude":
-                x= self.magnitude
+                x= self.imgdata.magnitude
                 print(self.img_combo[i].currentText())
+                print(y)
             elif self.img_combo[i].currentText() == "Phase":
-                x= self.phase
+                x= self.imgdata.phase
                 print(self.img_combo[i].currentText())
+                print(y)
             elif self.img_combo[i].currentText() == "Real":
-                x= self.real
+                x= self.imgdata.real
                 print(self.img_combo[i].currentText())
+                print(y)
             elif self.img_combo[i].currentText() == "Imaginary": 
-                x= self.imaginary
+                x= self.imgdata.imaginary
                 print(self.img_combo[i].currentText())
+                print(y)
             else: self.images[2+y%2].clear()
         self.images[2+y%2].setImage(x.T)
+        self.images[2+y%2].view.setRange(xRange=[0,self.imgheight[y%2]], yRange=[0,self.imgwidth[y%2]],padding=0)
+
+    def mixer(self):
+        self.gain1=self.ui.component1_slider.value()
+        self.gain2=self.ui.component2_slider.value()
+        self.type1=self.types[0].currentText()
+        self.type2=self.types[1].currentText()
+        self.img1=self.opimg[0].currentText()
+        self.img2=self.opimg[1].currentText()
+        if (self.img1 != self.img2):
+
+            self.path1= self.paths[0]
+            self.path2= self.paths[1]
+            self.imgmix1= inputimg(self.path1)
+            self.imgmix2= inputimg(self.path2)
+            if (self.type1=="Magnitude" or self.type1=="Pahse") and (self.type2=="Magnitude" or self.type2=="Pahse"):
+                self.mode ="magphase"
+                print ("check1")
+                print (self.type1, self.type2)
+                print( self.img1, self.img2)
+            elif(self.type1=="Real" or self.type1=="Imaginary") and (self.type2=="Real" or self.type2=="Imaginary"):
+                self.mode = "realimg"
+                print (self.type1, self.type2)
+                print( self.img1, self.img2)
+                print ("check2")
+            else: 
+                self.mode ="magphase"
+                print("can't mix")
+                print (self.type1, self.type2)
+                print( self.img1, self.img2)
+
+            
+            if (self.img1 == "Image 1" and self.img2 == "Image 2" ):
+                output= self.imgmix1.mix(self.imgmix2,self.gain1,self.gain2,self.mode,self.type1)
+                print ("check3")
+            else: 
+                output= self.imgmix2.mix(self.imgmix1,self.gain1,self.gain2,self.mode,self.type1)
+                print ("check4", "\n")
+        else: 
+            print (self.type1, self.type2)
+            print( self.img1, self.img2)
+            #show the same image ba3deen
+
+        self.images[4].setImage((output).T)    
+        
 
 
 
