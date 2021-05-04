@@ -23,7 +23,7 @@
          <widget class="QComboBox" name="comboBox">
           <item>
            <property name="text">
-            <string> </string>
+            <string/>
            </property>
           </item>
           <item>
@@ -70,7 +70,7 @@
            <widget class="QComboBox" name="comboBox_2">
             <item>
              <property name="text">
-              <string> </string>
+              <string/>
              </property>
             </item>
             <item>
@@ -137,7 +137,7 @@
          <widget class="QComboBox" name="output_channel">
           <item>
            <property name="text">
-            <string> </string>
+            <string/>
            </property>
           </item>
           <item>
@@ -191,7 +191,7 @@
          <widget class="QComboBox" name="component1_img">
           <item>
            <property name="text">
-            <string> </string>
+            <string/>
            </property>
           </item>
           <item>
@@ -232,7 +232,7 @@
          <widget class="QComboBox" name="component2_img">
           <item>
            <property name="text">
-            <string> </string>
+            <string/>
            </property>
           </item>
           <item>
@@ -273,7 +273,7 @@
          <widget class="QComboBox" name="component1_type">
           <item>
            <property name="text">
-            <string> </string>
+            <string/>
            </property>
           </item>
           <item>
@@ -302,7 +302,7 @@
          <widget class="QComboBox" name="component2_type">
           <item>
            <property name="text">
-            <string> </string>
+            <string/>
            </property>
           </item>
           <item>
@@ -374,11 +374,27 @@
         </item>
         <item row="7" column="0" colspan="3">
          <layout class="QGridLayout" name="gridLayout_4">
-          <item row="2" column="1">
-           <widget class="ImageView" name="image1_2"/>
-          </item>
           <item row="2" column="0">
            <widget class="ImageView" name="image1"/>
+          </item>
+          <item row="0" column="0" colspan="2">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Maximum</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>215</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="1">
+           <widget class="ImageView" name="image1_2"/>
           </item>
           <item row="1" column="0" colspan="2">
            <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -427,22 +443,6 @@
              </widget>
             </item>
            </layout>
-          </item>
-          <item row="0" column="0" colspan="2">
-           <spacer name="verticalSpacer">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Maximum</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </item>
