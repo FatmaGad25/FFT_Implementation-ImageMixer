@@ -84,6 +84,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.horizontalLayout.addLayout(self.verticalLayout)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
+        # self.verticalLayout_2.setEnabled(False)
         self.gridLayout_5 = QtWidgets.QGridLayout()
         self.gridLayout_5.setObjectName("gridLayout_5")
         self.output_channel = QtWidgets.QComboBox(self.centralwidget)
@@ -110,6 +111,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.component1_slider.setOrientation(QtCore.Qt.Horizontal)
         self.component1_slider.setObjectName("component1_slider")
         self.component1_slider.setValue(100)
+        # self.component1_slider.setEnabled(False)
         self.gridLayout_5.addWidget(self.component1_slider, 3, 1, 1, 2)
         self.component1_img = QtWidgets.QComboBox(self.centralwidget)
         self.component1_img.setObjectName("component1_img")
@@ -251,72 +253,39 @@ class Ui_MainWindow(QtGui.QMainWindow):
         #self.actionOpen.triggered.connect(lambda:self.Components())
         self.counter=-1
         self.images=[self.img1,self.img2,self.img1_component,self.img2_component,self.output1,self.output2]
-
-
-    # def readsignal(self):
-    #     #self.fname=QtGui.QFileDialog.getOpenFileName(self,"txt or CSV or xls","QFileDialog.getOpenFileName()", "","All Files (*);;Python Files (*.py)")
-    #     self.fname=QtGui.QFileDialog.getOpenFileName(self, 'Open file', "Image files (*.jpg *.gif)")
-    #     self.path=self.fname[0]
-    #     self.img= cv2.imread(self.path,0)
-    #     print (self.img)
-    # def opensignal(self):
-    #     self.readsignal()
-    #     self.counter+=1
-    #     self.images[self.counter%2].setImage(self.img.T)
-    #     # self.img1.setImage(self.img.T)
-
-    # def Components(self):
-    #     self.fft = np.fft.fft2(self.img)
-    #     # print(self.fft)
-    #     self.amplitude = abs(self.fft)
-    #     self.magnitude = 20*np.log(np.abs(np.fft.fftshift(self.fft)))
-    #     self.fshift = np.fft.fftshift(self.fft)
-    #     self.ishift = np.fft.ifftshift(fshift)
-    #     self.phase = np.angle(self.fft)
-    #     self.real = np.real(self.fft)
-    #     self.imaginary = np.imag(self.fft)
-    #     self.imagnitude= np.fft.ifft2(self.magnitude)
-    #     self.iamplitude= np.fft.ifft2(self.amplitude)
-    #     print(self.phase)
-    #     self.images[2+self.counter%2].setImage(self.imagnitude.T)
-
-
-
-
-
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.img1_combo.setItemText(0, _translate("MainWindow", " "))
+        self.img1_combo.setItemText(0, _translate("MainWindow", "Choose a Component"))
         self.img1_combo.setItemText(1, _translate("MainWindow", "Magnitude"))
         self.img1_combo.setItemText(2, _translate("MainWindow", "Phase"))
         self.img1_combo.setItemText(3, _translate("MainWindow", "Real"))
         self.img1_combo.setItemText(4, _translate("MainWindow", "Imaginary"))
         self.img2_label.setText(_translate("MainWindow", "Image 2"))
-        self.img2_combo.setItemText(0, _translate("MainWindow", " "))
+        self.img2_combo.setItemText(0, _translate("MainWindow", "Choose a Component"))
         self.img2_combo.setItemText(1, _translate("MainWindow", "Magnitude"))
         self.img2_combo.setItemText(2, _translate("MainWindow", "Phase"))
         self.img2_combo.setItemText(3, _translate("MainWindow", "Real"))
         self.img2_combo.setItemText(4, _translate("MainWindow", "Imaginary"))
         self.img1_label.setText(_translate("MainWindow", "Image 1"))
-        self.output_channel.setItemText(0, _translate("MainWindow", " "))
+        self.output_channel.setItemText(0, _translate("MainWindow", "Choose Output Channel"))
         self.output_channel.setItemText(1, _translate("MainWindow", "Output 1"))
         self.output_channel.setItemText(2, _translate("MainWindow", "Output 2"))
         self.Component1.setText(_translate("MainWindow", "Component 1"))
-        self.component1_img.setItemText(0, _translate("MainWindow", " "))
+        self.component1_img.setItemText(0, _translate("MainWindow", "Choose Image"))
         self.component1_img.setItemText(1, _translate("MainWindow", "Image 1"))
         self.component1_img.setItemText(2, _translate("MainWindow", "Image 2"))
         self.component2.setText(_translate("MainWindow", "Component 2"))
-        self.component2_img.setItemText(0, _translate("MainWindow", " "))
+        self.component2_img.setItemText(0, _translate("MainWindow", "Choose Image"))
         self.component2_img.setItemText(1, _translate("MainWindow", "Image 1"))
         self.component2_img.setItemText(2, _translate("MainWindow", "Image 2"))
         self.mixer_output.setText(_translate("MainWindow", "Mixer Output"))
-        self.component1_type.setItemText(0, _translate("MainWindow", " "))
+        self.component1_type.setItemText(0, _translate("MainWindow", "Choose a Component to mix"))
         self.component1_type.setItemText(1, _translate("MainWindow", "Magnitude"))
         self.component1_type.setItemText(2, _translate("MainWindow", "Phase"))
         self.component1_type.setItemText(3, _translate("MainWindow", "Real"))
         self.component1_type.setItemText(4, _translate("MainWindow", "Imaginary"))
-        self.component2_type.setItemText(0, _translate("MainWindow", " "))
+        self.component2_type.setItemText(0, _translate("MainWindow", "Choose a Component to mix"))
         self.component2_type.setItemText(1, _translate("MainWindow", "Magnitude"))
         self.component2_type.setItemText(2, _translate("MainWindow", "Phase"))
         self.component2_type.setItemText(3, _translate("MainWindow", "Real"))

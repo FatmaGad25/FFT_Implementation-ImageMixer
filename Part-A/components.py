@@ -11,14 +11,19 @@ class inputimg():
         :param imgPath: absolute path of the image
         """
         self.imgPath = imgPath
-        self.img = cv2.imread(self.imgPath,0)
+        self.img = cv2.imread(self.imgPath,flags=cv2.IMREAD_GRAYSCALE)
         self.imgShape = self.img.shape
         self.fft = np.fft.fft2(self.img)
         self.real = np.real(self.fft)
         self.imaginary = np.imag(self.fft)
-        self.magnitude = 20*np.log(np.abs(np.fft.fftshift(self.fft)))
-        self.amplitude = np.abs(self.fft)
         self.phase = np.angle(self.fft)
+        self.amplitude = np.abs(self.fft)
+
+        self.fftshift = np.fft.fftshift(self.fft)    
+        self.magnitude = 20*np.log(np.abs(np.fft.fftshift(self.fft)))
+        self.realshift = 20*np.log(np.real(np.fft.fftshift(self.fft)))      
+        self.phaseshift = np.angle(np.fft.fftshift(self.fft))
+        self.imaginaryshift = np.imag(np.fft.fftshift(self.fft))
         
     # def mix(self, imageToBeMixed: 'ImageModel', magnitudeOrRealRatio: float, phaesOrImaginaryRatio: float, mode: 'Modes', type1):
     def mix(self, imageToBeMixed: 'inputimg', gain1: float, gain2: float, mode: str, type1: str):
@@ -41,7 +46,7 @@ class inputimg():
             # mix1 = (gain1 * M1 + (1 - gain1) * M2) * exp((1-gain2) * P1 + gain2 * P2)
 
             M1 = self.amplitude
-            M2 = imageToBeMixed.magnitude
+            M2 = imageToBeMixed.amplitude
 
             P1 = self.phase
             P2 = imageToBeMixed.phase

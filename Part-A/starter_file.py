@@ -18,6 +18,9 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.sliders=[self.ui.component1_slider, self.ui.component2_slider]
         self.types=[self.ui.component1_type,self.ui.component2_type]
         self.opimg=[self.ui.component1_img,self.ui.component2_img]
+        self.enable=[self.ui.output_channel, self.ui.component1_img,self.ui.component2_img, self.ui.component1_type, self.ui.component2_type, self.ui.component1_slider, self.ui.component2_slider, self.ui.img1_combo,  self.ui.img2_combo]
+        for i in range (9):
+            self.enable[i].setEnabled(False)
         # self.images=[self.ui.img2,self.ui.img1_component,self.ui.img2_component,self.ui.output1,self.ui.output2]
 
         for i in range(len(self.images)):
@@ -30,7 +33,6 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.paths=[]
         self.imgwidth=[]
         self.imgheight=[]
-        #self.ui.pause.clicked.connect(lambda:self.opensignal(0))
         self.ui.actionOpen1.triggered.connect(lambda:self.opensignal(0))
         self.ui.actionOpen2.triggered.connect(lambda:self.opensignal(1))
         self.ui.img1_combo.currentTextChanged.connect(lambda:self.Components(0))
@@ -39,8 +41,6 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         
         for i in range(0,2):
             self.sliders[i].valueChanged.connect(lambda:self.mixer())
-            # self.sliders[i].setMaximum(1)
-            # self.sliders[i].setTickInterval(0.1)
             self.types[i].currentTextChanged.connect(lambda:self.mixer())
             self.opimg[i].currentTextChanged.connect(lambda:self.mixer())
         
@@ -58,6 +58,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             self.paths.append(self.path)
             self.imgwidth.append(self.width)
             self.imgheight.append(self.height)
+            self.ui.img1_combo.setEnabled(True)
             #print(self.imgwidth , self.imgheight)
             self.ui.images[0].setImage((self.imgdata.img).T)
             #self.ui.images[0].view.setRange(xRange=[0,self.width], yRange=[0,self.height],padding=0)
@@ -69,8 +70,9 @@ class ApplicationWindow(QtWidgets.QMainWindow):
                 self.paths.append(self.path)
                 self.imgwidth.append(self.width)
                 self.imgheight.append(self.height)
-                #print(self.imgwidth , self.imgheight)
                 self.ui.images[1].setImage((self.imgdata.img).T)
+                for i in range (9):
+                    self.enable[i].setEnabled(True)
                 #self.ui.images[1].view.setRange(xRange=[0,self.width], yRange=[0,self.height],padding=0)   
 
                     
@@ -85,15 +87,15 @@ class ApplicationWindow(QtWidgets.QMainWindow):
                 print(self.img_combo[i].currentText())
                 print(y)
             elif self.img_combo[i].currentText() == "Phase":
-                x= self.imgdata.phase
+                x= self.imgdata.phaseshift
                 print(self.img_combo[i].currentText())
                 print(y)
             elif self.img_combo[i].currentText() == "Real":
-                x= self.imgdata.real
+                x= self.imgdata.realshift
                 print(self.img_combo[i].currentText())
                 print(y)
             elif self.img_combo[i].currentText() == "Imaginary": 
-                x= self.imgdata.imaginary
+                x= self.imgdata.imaginaryshift
                 print(self.img_combo[i].currentText())
                 print(y)
             else: self.images[2+y%2].clear()
@@ -135,22 +137,27 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             else: 
                 output= self.imgmix2.mix(self.imgmix1,self.gain1,self.gain2,self.mode,self.type1)
                 print ("check4", "\n")
+        elif (self.img1 == "Image 1" and self.img2 == "Image 1"):
+            self.path1= self.paths[0]
+            output= inputimg(self.path1).img
+
+        elif(self.img1 == "Image 2" and self.img2 == "Image 2"):
+            self.path1= self.paths[1]
+            output= inputimg(self.path1).img
+
+
         else: 
             print (self.type1, self.type2)
             print( self.img1, self.img2)
+            print (" Unexpected error")
             #show the same image ba3deen
+
+
+
         if self.ui.output_channel.currentText() == "Output 1":        
             self.images[4].setImage((output).T)    
         elif self.ui.output_channel.currentText() == "Output 2":        
             self.images[5].setImage((output).T)
-        
-    # def ouput_image(self):
-    #     if self.ui.output_channel.currentText() == "Output 1":
-    #         self.mixer(4)
-    #     elif self.ui.output_channel.currentText() == "Output 2":
-    #         self.mixer(5)
-           
-
 
 
 if __name__ == "__main__":
