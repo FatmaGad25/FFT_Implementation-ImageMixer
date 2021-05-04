@@ -51,6 +51,10 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.imgdata = inputimg(self.path)
         self.img= cv2.imread(self.path,0)
         self.height, self.width = self.img.shape
+        if (self.path): 
+            pass
+        
+
 
     def opensignal(self ,num):
         if num == 0:
@@ -79,6 +83,10 @@ class ApplicationWindow(QtWidgets.QMainWindow):
 
     def Components(self,y):
         self.images[2+y%2].clear()
+        # if y==0 :
+        #     self.path=self.paths[0]
+        # else: 
+        #     self.path= self.paths[1]
         self.path = self.paths[y%2]
         self.imgdata = inputimg(self.path)
         for i in range (0,2):
@@ -109,6 +117,8 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.type2=self.types[1].currentText()
         self.img1=self.opimg[0].currentText()
         self.img2=self.opimg[1].currentText()
+
+
         if (self.img1 != self.img2):
 
             self.path1= self.paths[0]
@@ -156,7 +166,8 @@ class ApplicationWindow(QtWidgets.QMainWindow):
 
         if self.ui.output_channel.currentText() == "Output 1":        
             self.images[4].setImage((output).T)    
-        elif self.ui.output_channel.currentText() == "Output 2":        
+        elif self.ui.output_channel.currentText() == "Output 2":  
+            # self.ui.component1_type.setItemText(0)
             self.images[5].setImage((output).T)
 
 
