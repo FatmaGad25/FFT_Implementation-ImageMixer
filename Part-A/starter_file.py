@@ -89,7 +89,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         #     self.path= self.paths[1]
         self.path = self.paths[y%2]
         self.imgdata = inputimg(self.path)
-        for i in range (0,2):
+        for i in range (0,y+1):
             if self.img_combo[i].currentText() == "Magnitude":
                 x= self.imgdata.magnitude
                 print(self.img_combo[i].currentText())
