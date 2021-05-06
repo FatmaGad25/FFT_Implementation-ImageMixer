@@ -19,7 +19,6 @@ NumberOfData=[]
 for i in range (5):
     Sampels.append([random.randint(1,10000) for _ in range(2**(4+i*3))])   
     NumberOfData.append(len(Sampels[i]))
-# MSE = np.square(np.subtract(outputs_fft,outputs_ft)).mean()
 for i in range(5):
     TimeBeforeFFT.append(time.time())
     TransformedDataFFT.append(Fourier.FFT(Sampels[i]))
