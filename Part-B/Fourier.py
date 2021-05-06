@@ -4,9 +4,8 @@ import numpy as np
 from numpy import random
 import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
-Data=[]
 Error=[]
-ErrorMean=[]
+MeanSquareError=[]
 TransformedDataDFT=[]
 TransformedDataFFT=[]
 Sampels=[]
@@ -20,7 +19,7 @@ NumberOfData=[]
 for i in range (5):
     Sampels.append([random.randint(1,10000) for _ in range(2**(4+i*3))])   
     NumberOfData.append(len(Sampels[i]))
-
+# MSE = np.square(np.subtract(outputs_fft,outputs_ft)).mean()
 for i in range(5):
     TimeBeforeFFT.append(time.time())
     TransformedDataFFT.append(Fourier.FFT(Sampels[i]))
@@ -30,12 +29,12 @@ for i in range(5):
     TransformedDataDFT.append(Fourier.DFT(Sampels[i]))
     TimeAfterDFT.append(time.time())
     TimeDifferenceDFT.append(TimeAfterDFT[i]-TimeBeforeDFT[i])
-    Error.append(list(np.array(TransformedDataDFT[i])-np.array(TransformedDataFFT[i])))
-    Mean=sum(Error[i])/len(Error[i])
-    ErrorMean.append(Mean)
-for i in range(len(ErrorMean)):
-    Data.append(abs(ErrorMean[i]))
-plt.plot(NumberOfData,Data)
+    MeanSquareError.append(np.square(np.subtract(TransformedDataDFT[i],TransformedDataFFT[i])).mean())
+print(MeanSquareError)
+for i in range(len(MeanSquareError)):
+    Error.append(abs(MeanSquareError[i]))
+
+plt.plot(NumberOfData,Error)
 plt.ylim(-2,2)
 plt.show()
 TimeDifferenceDFT=np.array(TimeDifferenceDFT)
