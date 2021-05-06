@@ -29,8 +29,10 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.enable=[self.ui.output_channel, self.ui.component1_img,self.ui.component2_img, self.ui.component1_type, self.ui.component2_type, self.ui.component1_slider, self.ui.component2_slider, self.ui.img1_combo,  self.ui.img2_combo]
         self.ui.component1_type.addItem("Uniphase")
         self.ui.component1_type.addItem("Unimagnitude")
-        self.ui.component2_type.addItem("Uniphase")
-        self.ui.component2_type.addItem("Unimagnitude")
+        # self.ui.component2_type.clear()
+        # self.ui.component2_type.addItem("Uniphase")
+        # self.ui.component2_type.addItem("Unimagnitude")
+        self.ui.component2_type.clear()
         for i in range (9):
             self.enable[i].setEnabled(False)
 
@@ -39,7 +41,10 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             self.images[i].ui.roiBtn.hide()
             self.images[i].ui.menuBtn.hide()
             self.images[i].ui.roiPlot.hide()
+
+
         self.counter=-1
+        self.counter2=-1
         self.data=[]
         self.paths=[]
         self.imgwidth=[]
@@ -48,13 +53,19 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.ui.actionOpen2.triggered.connect(lambda:self.opensignal(1))
         self.ui.img1_combo.currentTextChanged.connect(lambda:self.Components(0))
         self.ui.img2_combo.currentTextChanged.connect(lambda:self.Components(1))
-        self.ui.output_channel.currentTextChanged.connect(lambda:self.mixer())
-        
-        for i in range(0,2):
-            self.sliders[i].valueChanged.connect(lambda:self.mixer())
-            self.types[i].currentTextChanged.connect(lambda:self.mixer())
-            self.opimg[i].currentTextChanged.connect(lambda:self.mixer())
-        
+        self.ui.output_channel.currentTextChanged.connect(lambda:self.mixer(0,False))
+        self.ui.component2_type.currentTextChanged.connect(lambda:self.mixer(0,False))
+        self.ui.component1_type.currentTextChanged.connect(lambda:self.mixer(1,True))
+        self.ui.component1_img.currentTextChanged.connect(lambda:self.mixer(0,False))
+        self.ui.component2_img.currentTextChanged.connect(lambda:self.mixer(0,False))
+        self.ui.component1_slider.valueChanged.connect(lambda:self.mixer(0,False))
+        self.ui.component2_slider.valueChanged.connect(lambda:self.mixer(0,False))
+
+
+        # for i in range(0,2):
+        #     self.sliders[i].valueChanged.connect(lambda:self.mixer())
+        #     # self.types[i].currentTextChanged.connect(lambda:self.mixer())
+        #     self.opimg[i].currentTextChanged.connect(lambda:self.mixer()) 
 
     def readsignal(self):
         logger.info("Browsing image ...")
@@ -113,44 +124,79 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.images[2+y%2].setImage(x.T)
         # self.images[2+y%2].view.setRange(xRange=[0,self.imgheight[y%2]], yRange=[0,self.imgwidth[y%2]],padding=0)
 
-    def mixer(self):
-        self.gain1=self.ui.component1_slider.value()
-        self.gain2=self.ui.component2_slider.value()
-        self.type1=self.types[0].currentText()
-        self.type2=self.types[1].currentText()
+
+
+    # def getdata(self):
+    #     self.gain1=self.ui.component1_slider.value()
+    #     self.gain2=self.ui.component2_slider.value()
+    #     self.type1=self.types[0].currentText()
+    #     self.type2=self.types[1].currentText()
+    #     type22=self.types[1].currentText()
+    #     self.setcombotext(self.type1,type22)
+    #     self.mixer(self.gain1, self.gain2, self.type1, self.type2)
+    #     # self.img1=self.opimg[0].currentText()
+    #     # self.img2=self.opimg[1].currentText()
+
+
+
+
+    def mixer(self,z,flag):
+
+        gain1=self.ui.component1_slider.value()
+        gain2=self.ui.component2_slider.value()
+        type1=self.types[0].currentText()
+        type2= self.ui.component2_type.currentText()
+        type22= self.ui.component2_type.currentText()
         self.img1=self.opimg[0].currentText()
         self.img2=self.opimg[1].currentText()
+        opchannel=self.ui.output_channel.currentText()
+
+        # self.ui.component2_type.clear()
+
+        if (flag):
+            self.setcombotext(type1,type22)
+
 
 
         if (self.img1 != self.img2):
-
+        
             self.path1= self.paths[0]
             self.path2= self.paths[1]
             self.imgmix1= inputimg(self.path1)
             self.imgmix2= inputimg(self.path2)
-            if (self.type1=="Magnitude" or self.type1=="Phase") and (self.type2=="Magnitude" or self.type2=="Phase" ):
-                self.mode ="magphase"
-                # logger.info(" Mixing Magnitude and Phase Mode ...")
-            elif(self.type1=="Real" or self.type1=="Imaginary") and (self.type2=="Real" or self.type2=="Imaginary"):
-                self.mode = "realimg"
-                # logger.info("Mixing Real And Imaginary Mode ...")
-            elif(self.type1=="Unimagnitude" and self.type2=="Phase" ) or (self.type2=="Unimagnitude" and self.type1=="Phase"):
-                self.mode = "unimag"
-                # logger.info("Mixing Phase and Unimagnitude")
-            elif(self.type1=="Uniphase" and self.type2=="Magnitude") or (self.type2=="Uniphase" and self.type1=="Phase"):
-                self.mode = "uniphase"
-                # logger.info("Mixing Uniphase and Magnitude")
-            elif(self.type1=="Uniphase" and self.type2=="Unimagnitude") or (self.type2=="Uniphase" and self.type1=="Unimagnitude"):
-                self.mode = "uniuni"
-                # logger.info("Mixing Uniphase and Unimagnitude")
+            if (type1=="Magnitude" and type2=="Phase") or (type2=="Magnitude" and type1=="Phase" ):
+                mode ="magphase"
+            elif(type1=="Real" or type1=="Imaginary") and (type2=="Real" or type2=="Imaginary"):
+                mode = "realimg"
+            elif(type1=="Unimagnitude" and type2=="Phase" ) or (type2=="Unimagnitude" and type1=="Phase"):
+                mode = "unimag"
+            elif(type1=="Uniphase" and type2=="Magnitude") or (type2=="Uniphase" and type1=="Magnitude"):
+                mode = "uniphase"
+            elif(type1=="Uniphase" and type2=="Unimagnitude") or (type2=="Uniphase" and type1=="Unimagnitude"):
+                mode = "uniuni"
             else: 
                 logger.info("Error! Can't Mix ... ")
             
-            if (self.img1 == "Image 1" and self.img2 == "Image 2" ):
-                output= self.imgmix1.mix(self.imgmix2,self.gain1,self.gain2,self.mode,self.type1,self.type2)
-            else: 
-                output= self.imgmix2.mix(self.imgmix1,self.gain1,self.gain2,self.mode,self.type1,self.type2)
-        elif (self.img1 == "Image 1" and self.img2 == "Image 1"):
+            try:
+                if (self.img1 == "Image 1" and self.img2 == "Image 2" ):
+                    output= self.imgmix1.mix(self.imgmix2,gain1,gain2,mode,type1,type2)
+                else: 
+                    output= self.imgmix2.mix(self.imgmix1,gain1,gain2,mode,type1,type2)
+            except :
+                pass
+
+
+        try:
+            if self.ui.output_channel.currentText() == "Output 1":        
+                self.images[4].setImage((output).T)   
+             
+            elif self.ui.output_channel.currentText() == "Output 2":  
+                self.images[5].setImage((output).T)
+        except:
+            pass
+
+        # self.output(output)
+        if (self.img1 == "Image 1" and self.img2 == "Image 1"):
             # logger.warning("Mixing the same image! , Dosen't affect the image")
             self.path1= self.paths[0]
             output= inputimg(self.path1).img
@@ -159,19 +205,35 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             # logger.warning("Mixing the same image! , Dosen't affect the image")
             self.path1= self.paths[1]
             output= inputimg(self.path1).img
-        else: 
-            logger.warning(" Collecting Data ")
+
+        try:
+
+            logger.info(f"Mixing {gain1}% of {self.img1} {type1} and {gain2}% of {self.img2} {type2} in {self.ui.output_channel.currentText()} at mixing mood of: {mode} ")
+
+        except: 
+            pass
 
 
-        if self.ui.output_channel.currentText() == "Output 1":        
-            self.images[4].setImage((output).T)    
-            # logger.info(" Mixing in Output CHannel 1 ")
-        elif self.ui.output_channel.currentText() == "Output 2":  
-            self.images[5].setImage((output).T)
-            # logger.info(" Mixing in Output CHannel 2 ")
-        
+    def setcombotext(self, type1, type2):
+    # def setcombotext(self, type1, type2):
 
-        logger.info(f"Mixing {self.gain1}% of {self.img1} {self.type1} and {self.gain2}% of {self.img2} {self.type2} in {self.ui.output_channel.currentText()} at mixing mood of: {self.mode} ")
+        self.ui.component2_type.clear()
+        # self.ui.component2_type.addItem("Choose Component")
+
+        if (type1 == "Magnitude" or type1 =="Unimagnitude"):
+            self.ui.component2_type.addItem("Phase")
+            self.ui.component2_type.addItem("Uniphase")
+            self.ui.component2_type.setCurrentText("Phase")
+        elif (type1 == "Phase" or type1== "Uniphase"):
+            self.ui.component2_type.addItem("Magnitude")
+            self.ui.component2_type.addItem("Unimagnitude")
+            self.ui.component2_type.setCurrentText("Magnitude")
+        elif type1 == "Real":
+            self.ui.component2_type.addItem("Imaginary")
+            self.ui.component2_type.setCurrentText("Imaginary")
+        elif type1 == "Imaginary":
+            self.ui.component2_type.addItem("Real")
+            self.ui.component2_type.setCurrentText("Real")
 
 
 if __name__ == "__main__":

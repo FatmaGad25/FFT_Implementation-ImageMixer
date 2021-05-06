@@ -104,7 +104,7 @@ class inputimg():
                 
 
         elif mode== "uniuni":
-            print (mode)
+            # print (mode)
             if (type1=="Unimagnitude"):
                 M1 = self.unimag
                 M2 = imgmix.amplitude
@@ -124,4 +124,5 @@ class inputimg():
             combined = np.multiply(magnitudeMix, np.exp(1j * phaseMix))
             mixInverse = np.real(np.fft.ifft2(combined))
 
+ 
         return abs(mixInverse)
