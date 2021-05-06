@@ -27,9 +27,12 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.types=[self.ui.component1_type,self.ui.component2_type]
         self.opimg=[self.ui.component1_img,self.ui.component2_img]
         self.enable=[self.ui.output_channel, self.ui.component1_img,self.ui.component2_img, self.ui.component1_type, self.ui.component2_type, self.ui.component1_slider, self.ui.component2_slider, self.ui.img1_combo,  self.ui.img2_combo]
+        self.ui.component1_type.addItem("Uniphase")
+        self.ui.component1_type.addItem("Unimagnitude")
+        self.ui.component2_type.addItem("Uniphase")
+        self.ui.component2_type.addItem("Unimagnitude")
         for i in range (9):
             self.enable[i].setEnabled(False)
-        # self.images=[self.ui.img2,self.ui.img1_component,self.ui.img2_component,self.ui.output1,self.ui.output2]
 
         for i in range(len(self.images)):
             self.images[i].ui.histogram.hide()
@@ -72,10 +75,8 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             self.imgwidth.append(self.width)
             self.imgheight.append(self.height)
             self.ui.img1_combo.setEnabled(True)
-            #print(self.imgwidth , self.imgheight)
             self.ui.images[0].setImage((self.imgdata.img).T)
             logger.info("Opened First image ...")
-            #self.ui.images[0].view.setRange(xRange=[0,self.width], yRange=[0,self.height],padding=0)
         if num == 1:
             self.readsignal()
             if self.width != self.imgwidth[0] or self.height !=self.imgheight[0]:
@@ -89,8 +90,6 @@ class ApplicationWindow(QtWidgets.QMainWindow):
                 for i in range (9):
                     self.enable[i].setEnabled(True)
                     logger.info(" Opening Second image ...")
-                #self.ui.images[1].view.setRange(xRange=[0,self.width], yRange=[0,self.height],padding=0)   
-
                     
 
     def Components(self,y):
@@ -101,26 +100,18 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             if self.img_combo[i].currentText() == "Magnitude":
                 x= self.imgdata.magnitude
                 logger.info(" Presenting Magnitude.... ")
-                print(self.img_combo[i].currentText())
-                print(y)
             elif self.img_combo[i].currentText() == "Phase":
                 x= self.imgdata.phaseshift
                 logger.info(" Presenting Phase.... ")
-                print(self.img_combo[i].currentText())
-                print(y)
             elif self.img_combo[i].currentText() == "Real":
                 x= self.imgdata.realshift
                 logger.info(" Presenting Real.... ")
-                print(self.img_combo[i].currentText())
-                print(y)
             elif self.img_combo[i].currentText() == "Imaginary": 
                 x= self.imgdata.imaginaryshift
                 logger.info(" Presenting Imaginary.... ")
-                print(self.img_combo[i].currentText())
-                print(y)
             else: self.images[2+y%2].clear()
         self.images[2+y%2].setImage(x.T)
-        self.images[2+y%2].view.setRange(xRange=[0,self.imgheight[y%2]], yRange=[0,self.imgwidth[y%2]],padding=0)
+        # self.images[2+y%2].view.setRange(xRange=[0,self.imgheight[y%2]], yRange=[0,self.imgwidth[y%2]],padding=0)
 
     def mixer(self):
         self.gain1=self.ui.component1_slider.value()
@@ -137,55 +128,50 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             self.path2= self.paths[1]
             self.imgmix1= inputimg(self.path1)
             self.imgmix2= inputimg(self.path2)
-            if (self.type1=="Magnitude" or self.type1=="Phase") and (self.type2=="Magnitude" or self.type2=="Phase"):
+            if (self.type1=="Magnitude" or self.type1=="Phase") and (self.type2=="Magnitude" or self.type2=="Phase" ):
                 self.mode ="magphase"
-                logger.info(" Mixing Magnitude and Phase Mode ...")
-                print ("check1")
-                print (self.type1, self.type2)
-                print( self.img1, self.img2)
+                # logger.info(" Mixing Magnitude and Phase Mode ...")
             elif(self.type1=="Real" or self.type1=="Imaginary") and (self.type2=="Real" or self.type2=="Imaginary"):
                 self.mode = "realimg"
-                logger.info("Mixing Real And Imaginary Mode ...")
-                print (self.type1, self.type2)
-                print( self.img1, self.img2)
-                print ("check2")
+                # logger.info("Mixing Real And Imaginary Mode ...")
+            elif(self.type1=="Unimagnitude" and self.type2=="Phase" ) or (self.type2=="Unimagnitude" and self.type1=="Phase"):
+                self.mode = "unimag"
+                # logger.info("Mixing Phase and Unimagnitude")
+            elif(self.type1=="Uniphase" and self.type2=="Magnitude") or (self.type2=="Uniphase" and self.type1=="Phase"):
+                self.mode = "uniphase"
+                # logger.info("Mixing Uniphase and Magnitude")
+            elif(self.type1=="Uniphase" and self.type2=="Unimagnitude") or (self.type2=="Uniphase" and self.type1=="Unimagnitude"):
+                self.mode = "uniuni"
+                # logger.info("Mixing Uniphase and Unimagnitude")
             else: 
                 logger.info("Error! Can't Mix ... ")
-                print("can't mix")
-                print (self.type1, self.type2)
-                print( self.img1, self.img2)
             
             if (self.img1 == "Image 1" and self.img2 == "Image 2" ):
-                output= self.imgmix1.mix(self.imgmix2,self.gain1,self.gain2,self.mode,self.type1)
-                print ("check3")
+                output= self.imgmix1.mix(self.imgmix2,self.gain1,self.gain2,self.mode,self.type1,self.type2)
             else: 
-                output= self.imgmix2.mix(self.imgmix1,self.gain1,self.gain2,self.mode,self.type1)
-                print ("check4", "\n")
+                output= self.imgmix2.mix(self.imgmix1,self.gain1,self.gain2,self.mode,self.type1,self.type2)
         elif (self.img1 == "Image 1" and self.img2 == "Image 1"):
-            logger.warning("Mixing the same image! , Dosen't affect the image")
+            # logger.warning("Mixing the same image! , Dosen't affect the image")
             self.path1= self.paths[0]
             output= inputimg(self.path1).img
 
         elif(self.img1 == "Image 2" and self.img2 == "Image 2"):
-            logger.warning("Mixing the same image! , Dosen't affect the image")
+            # logger.warning("Mixing the same image! , Dosen't affect the image")
             self.path1= self.paths[1]
             output= inputimg(self.path1).img
-
-
         else: 
-            logger.warning(" Unexpected Error! ")
-            print (self.type1, self.type2)
-            print( self.img1, self.img2)
-            print (" Unexpected error")
-            #show the same image ba3deen
+            logger.warning(" Collecting Data ")
+
 
         if self.ui.output_channel.currentText() == "Output 1":        
             self.images[4].setImage((output).T)    
-            logger.info(" Mixing in Output CHannel 1 ")
+            # logger.info(" Mixing in Output CHannel 1 ")
         elif self.ui.output_channel.currentText() == "Output 2":  
-            # self.ui.component1_type.setItemText(0)
             self.images[5].setImage((output).T)
-            logger.info(" Mixing in Output CHannel 2 ")
+            # logger.info(" Mixing in Output CHannel 2 ")
+        
+
+        logger.info(f"Mixing {self.gain1}% of {self.img1} {self.type1} and {self.gain2}% of {self.img2} {self.type2} in {self.ui.output_channel.currentText()} at mixing mood of: {self.mode} ")
 
 
 if __name__ == "__main__":
