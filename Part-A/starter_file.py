@@ -29,9 +29,6 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.enable=[self.ui.output_channel, self.ui.component1_img,self.ui.component2_img, self.ui.component1_type, self.ui.component2_type, self.ui.component1_slider, self.ui.component2_slider, self.ui.img1_combo,  self.ui.img2_combo]
         self.ui.component1_type.addItem("Uniphase")
         self.ui.component1_type.addItem("Unimagnitude")
-        # self.ui.component2_type.clear()
-        # self.ui.component2_type.addItem("Uniphase")
-        # self.ui.component2_type.addItem("Unimagnitude")
         self.ui.component2_type.clear()
         for i in range (9):
             self.enable[i].setEnabled(False)
@@ -87,6 +84,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
             self.imgheight.append(self.height)
             self.ui.img1_combo.setEnabled(True)
             self.ui.images[0].setImage((self.imgdata.img).T)
+            self.ui.images[0].view.setAspectLocked(False)
             logger.info("Opened First image ...")
         if num == 1:
             self.readsignal()
@@ -98,6 +96,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
                 self.imgwidth.append(self.width)
                 self.imgheight.append(self.height)
                 self.ui.images[1].setImage((self.imgdata.img).T)
+                self.ui.images[1].view.setAspectLocked(False)
                 for i in range (9):
                     self.enable[i].setEnabled(True)
                     logger.info(" Opening Second image ...")
@@ -122,22 +121,11 @@ class ApplicationWindow(QtWidgets.QMainWindow):
                 logger.info(" Presenting Imaginary.... ")
             else: self.images[2+y%2].clear()
         self.images[2+y%2].setImage(x.T)
+        self.images[2+y%2].view.setAspectLocked(False)
+        # for i in range (0,y+1):
+        #     n=self.img_combo[i].currentText().lower()
+        #     x=self.imgdata.n
         # self.images[2+y%2].view.setRange(xRange=[0,self.imgheight[y%2]], yRange=[0,self.imgwidth[y%2]],padding=0)
-
-
-
-    # def getdata(self):
-    #     self.gain1=self.ui.component1_slider.value()
-    #     self.gain2=self.ui.component2_slider.value()
-    #     self.type1=self.types[0].currentText()
-    #     self.type2=self.types[1].currentText()
-    #     type22=self.types[1].currentText()
-    #     self.setcombotext(self.type1,type22)
-    #     self.mixer(self.gain1, self.gain2, self.type1, self.type2)
-    #     # self.img1=self.opimg[0].currentText()
-    #     # self.img2=self.opimg[1].currentText()
-
-
 
 
     def mixer(self,z,flag):
@@ -150,8 +138,6 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.img1=self.opimg[0].currentText()
         self.img2=self.opimg[1].currentText()
         opchannel=self.ui.output_channel.currentText()
-
-        # self.ui.component2_type.clear()
 
         if (flag):
             self.setcombotext(type1,type22)
@@ -218,7 +204,6 @@ class ApplicationWindow(QtWidgets.QMainWindow):
     # def setcombotext(self, type1, type2):
 
         self.ui.component2_type.clear()
-        # self.ui.component2_type.addItem("Choose Component")
 
         if (type1 == "Magnitude" or type1 =="Unimagnitude"):
             self.ui.component2_type.addItem("Phase")

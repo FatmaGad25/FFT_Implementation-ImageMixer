@@ -1,462 +1,53 @@
-71 - INFO - Browsing image ...
-80 - INFO -  Browsed Successfully ! 
-90 - INFO - Opened First image ...
-71 - INFO - Browsing image ...
-80 - INFO -  Browsed Successfully ! 
-103 - INFO -  Opening Second image ...
-103 - INFO -  Opening Second image ...
-103 - INFO -  Opening Second image ...
-103 - INFO -  Opening Second image ...
-103 - INFO -  Opening Second image ...
-103 - INFO -  Opening Second image ...
-103 - INFO -  Opening Second image ...
-103 - INFO -  Opening Second image ...
-103 - INFO -  Opening Second image ...
-113 - INFO -  Presenting Magnitude.... 
-113 - INFO -  Presenting Magnitude.... 
-113 - INFO -  Presenting Magnitude.... 
+68 - INFO - Browsing image ...
+77 - INFO -  Browsed Successfully ! 
+88 - INFO - Opened First image ...
+68 - INFO - Browsing image ...
+77 - INFO -  Browsed Successfully ! 
+93 - WARNING - Opened Image with different dimensions ...
+68 - INFO - Browsing image ...
+77 - INFO -  Browsed Successfully ! 
+102 - INFO -  Opening Second image ...
+102 - INFO -  Opening Second image ...
+102 - INFO -  Opening Second image ...
+102 - INFO -  Opening Second image ...
+102 - INFO -  Opening Second image ...
+102 - INFO -  Opening Second image ...
+102 - INFO -  Opening Second image ...
+102 - INFO -  Opening Second image ...
+102 - INFO -  Opening Second image ...
 178 - INFO - Error! Can't Mix ... 
 178 - INFO - Error! Can't Mix ... 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
+211 - INFO - Mixing 100% of Image 1 Real and 0% of Image 2 Imaginary in Choose Output Channel at mixing mood of: realimg 
 178 - INFO - Error! Can't Mix ... 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 10% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 2% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 12% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 13% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 17% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 21% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 23% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 26% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 29% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 32% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 35% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 39% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 43% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 49% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 55% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 60% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 64% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 68% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 73% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 77% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 80% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 84% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 88% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 92% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 95% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 97% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 99% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 100% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 99% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 86% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 78% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 69% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 64% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 55% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 50% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 42% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 35% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 28% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 21% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 16% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 10% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 6% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 99% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 82% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 76% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 68% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 62% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 56% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 48% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 43% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 36% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 32% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 27% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 23% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 19% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 17% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 15% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 13% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 12% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 9% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 6% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 5% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 4% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 3% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 2% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 3% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 25% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 37% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 49% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 56% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 65% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 72% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 79% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 86% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 95% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: magphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 0% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 1% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 13% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 21% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 28% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 31% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 36% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 40% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 43% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 49% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 53% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 59% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 68% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 75% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 79% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 81% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 83% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 86% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 88% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 90% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 92% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 93% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 94% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 95% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 96% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 97% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 98% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 99% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 99% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 90% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 77% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 69% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 62% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 53% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 48% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 42% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 38% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 35% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 32% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 28% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 25% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 21% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 19% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 16% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 14% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 12% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 10% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 7% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 5% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 3% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 1% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 0% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 2% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 12% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 25% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 35% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 44% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 52% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 60% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 68% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 75% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 80% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 87% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 93% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 97% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 99% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Magnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniphase 
-178 - INFO - Error! Can't Mix ... 
-211 - INFO - Mixing 100% of Image 1 Phase and 100% of Image 2 Magnitude in Output 1 at mixing mood of: magphase 
+211 - INFO - Mixing 100% of Image 1 Real and 0% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
+211 - INFO - Mixing 99% of Image 1 Real and 0% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
+211 - INFO - Mixing 38% of Image 1 Real and 0% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
+211 - INFO - Mixing 10% of Image 1 Real and 0% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
+211 - INFO - Mixing 14% of Image 1 Real and 0% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
+211 - INFO - Mixing 31% of Image 1 Real and 0% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
+211 - INFO - Mixing 96% of Image 1 Real and 0% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
+211 - INFO - Mixing 100% of Image 1 Real and 0% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
+211 - INFO - Mixing 100% of Choose Image Real and 0% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
 178 - INFO - Error! Can't Mix ... 
 178 - INFO - Error! Can't Mix ... 
-211 - INFO - Mixing 100% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
+211 - INFO - Mixing 100% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
 178 - INFO - Error! Can't Mix ... 
-211 - INFO - Mixing 99% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 92% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 84% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 79% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 73% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 66% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 61% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 56% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 50% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 43% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 38% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 33% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 28% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 24% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 21% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 18% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 16% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 12% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 10% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 8% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 7% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 5% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 3% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 2% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 1% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 0% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 1% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 22% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 36% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 46% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 54% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 61% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 68% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 75% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 81% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 87% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 92% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 95% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 98% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 99% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 89% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 78% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 68% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 59% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 50% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 41% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 33% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 26% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 21% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 16% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 9% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 6% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 4% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 5% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 19% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 33% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 45% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 57% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 64% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 71% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 80% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 87% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 94% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 99% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Real and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-178 - INFO - Error! Can't Mix ... 
-211 - INFO - Mixing 100% of Image 1 Imaginary and 100% of Image 2 Real in Output 1 at mixing mood of: realimg 
-211 - INFO - Mixing 100% of Image 1 Imaginary and 100% of Image 2 Imaginary in Output 1 at mixing mood of: realimg 
-178 - INFO - Error! Can't Mix ... 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 100% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-178 - INFO - Error! Can't Mix ... 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 98% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 83% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 74% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 64% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 58% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 52% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 46% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 43% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 39% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 33% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 29% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 24% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 19% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 15% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 12% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 9% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 6% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 5% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 4% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 3% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 2% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 1% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 98% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 85% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 76% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 63% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 55% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 47% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 38% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 33% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 29% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 25% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 21% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 17% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 14% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 9% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 6% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 3% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 1% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 0% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 1% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 9% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 16% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 27% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 38% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 50% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 62% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 71% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 75% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 80% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 84% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 90% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 94% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 98% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 0% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 1% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 15% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 20% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 24% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 29% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 32% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 36% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 40% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 42% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 44% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 46% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 48% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 50% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 53% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 55% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 57% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 58% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 60% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 62% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 63% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 65% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 67% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 69% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 72% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 74% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 75% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 78% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 79% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 81% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 82% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 83% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 84% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 85% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 86% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 87% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 88% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 89% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 90% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 91% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 92% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 93% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 94% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 95% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 96% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 97% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 96% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 87% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 81% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 75% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 70% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 67% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 64% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 61% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 59% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 56% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 54% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 51% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 47% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 45% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 42% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 37% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 34% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 31% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 28% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 25% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 23% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 21% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 18% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 15% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 13% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 11% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 9% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 7% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 5% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 3% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-211 - INFO - Mixing 100% of Image 1 Uniphase and 2% of Image 2 Magnitude in Output 1 at mixing mood of: uniphase 
-178 - INFO - Error! Can't Mix ... 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 2% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-178 - INFO - Error! Can't Mix ... 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 3% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 15% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 24% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 33% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 38% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 45% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 51% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 58% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 62% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 65% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 66% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 67% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 69% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 72% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 77% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 80% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 81% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 84% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 86% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 87% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 88% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 89% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 90% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 91% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 90% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 91% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 100% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 99% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 79% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 65% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 54% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 42% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 33% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 22% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 15% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 8% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 1% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 0% of Image 2 Phase in Output 1 at mixing mood of: unimag 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 0% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 10% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 2% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 4% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 10% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 17% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 23% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 29% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 35% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 41% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 45% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 50% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 55% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 60% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 68% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 78% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 83% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 85% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 87% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 88% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 90% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 93% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 96% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 98% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 100% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 99% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 86% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 80% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 76% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 71% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 66% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 58% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 53% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 47% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 41% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 36% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 30% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 23% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 17% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 12% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 9% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 5% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 3% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 1% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
-211 - INFO - Mixing 100% of Image 1 Unimagnitude and 0% of Image 2 Uniphase in Output 1 at mixing mood of: uniuni 
+211 - INFO - Mixing 99% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 38% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 21% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 12% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 8% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 0% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 1% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 58% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 92% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 100% of Image 1 Real and 0% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 100% of Image 1 Real and 1% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 100% of Image 1 Real and 45% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 100% of Image 1 Real and 70% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 100% of Image 1 Real and 86% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 100% of Image 1 Real and 97% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+211 - INFO - Mixing 100% of Image 1 Real and 100% of Image 2 Imaginary in Output 2 at mixing mood of: realimg 
+112 - INFO -  Presenting Magnitude.... 
+112 - INFO -  Presenting Magnitude.... 
+112 - INFO -  Presenting Magnitude.... 

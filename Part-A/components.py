@@ -24,8 +24,7 @@ class inputimg():
 
         self.unimag = np.ones(np.shape(self.amplitude))
         self.uniphase = np.zeros(np.shape(self.phase))
-        # np.ones(np.shape(self.mag))
-        # np.zeros(np.shape(self.ph))  
+
     def mix(self, imgmix: 'inputimg', gain1: float, gain2: float, mode: str, type1: str, type2: str):
 
         gain1=gain1 / 100.0
@@ -34,6 +33,7 @@ class inputimg():
         type1=type1
         type2= type2
         mixInverse = None
+
 
         if mode == "magphase":
             M1 = self.amplitude
@@ -58,7 +58,7 @@ class inputimg():
                 realMix = gain1*R1 + (1-gain1)*R2
                 imaginaryMix = (1-gain2)*I1 + gain2*I2
             elif (type1== "Imaginary"):
-                imaginaryMix= gain1*I1 + (1-gain1)*P2 
+                imaginaryMix= gain1*I1 + (1-gain1)*I2 
                 realMix = gain2*R2 + (1-gain2)*R1
             combined = realMix + imaginaryMix * 1j
             mixInverse = np.real(np.fft.ifft2(combined))
@@ -125,4 +125,4 @@ class inputimg():
             mixInverse = np.real(np.fft.ifft2(combined))
 
  
-        return abs(mixInverse)
+        return (mixInverse)
